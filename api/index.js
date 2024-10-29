@@ -30,6 +30,7 @@ mongoose
     origin: 'https://contacts-frontend.vercel.app', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization", "token"],
   };
   
   // Middleware
