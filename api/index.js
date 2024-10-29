@@ -90,7 +90,6 @@ async function connectToDatabase() {
   }
 }
 
-<<<<<<< HEAD
   const corsOptions = {
     origin: 'https://contacts-frontend.vercel.app', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -100,19 +99,6 @@ async function connectToDatabase() {
   
   // Middleware
   app.use(cors(corsOptions));
-=======
-// CORS Configuration
-const corsOptions = {
-  origin: 'https://contacts-frontend-ecru.vercel.app',
-  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
-  credentials: true,
-};
-
-// Express App Setup
-const app = express();
-
-app.use(cors(corsOptions));
->>>>>>> 9bdf81cbc3799912b2defa5637b73ed182ee1dde
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
