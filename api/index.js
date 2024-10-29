@@ -90,15 +90,16 @@ async function connectToDatabase() {
   }
 }
 
-  const corsOptions = {
-    origin: 'https://contacts-frontend.vercel.app', 
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization", "token"],
-  };
+const corsOptions = {
+  origin: ["https://contacts-frontend.vercel.app"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization", "token"],
+  optionsSuccessStatus: 200,
+};
   
   // Middleware
-  app.use(cors(corsOptions));
+  app.options("*", cors(corsOptions));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
