@@ -24,7 +24,7 @@ const Auth = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let newUrl = url;
+    let newUrl = url.replace(/\/+$/, ''); 
     if(isLogin) {
         newUrl += '/auth/login'
     }
